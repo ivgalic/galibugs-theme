@@ -1,6 +1,167 @@
 // Grid settings
 $main-sm-columns:       12;
-$sidebar-sm-columns:    4;
 
 // Colors
-$brand-primary:         #27ae60;
+$accent: #EB7323;
+$accent-highlight: #F5A623;
+$light-text: #FFF;
+$dark-text: #4B4B4B;
+$dark-bg: #122B4A;
+$dark-bg-highlight: #204777;
+$dark-text-lighter: #999999;
+$dark-text-darker: #343E4A;
+$light-text-shadow: rgba(0, 0, 0, 0.5);
+$decoration: #17B365;
+$helper-text: #CDD6DF;
+
+// Bootstrap colors
+
+$gray-base: $dark-text;
+$gray-darker: $dark-text;
+$gray-dark: #000;
+$gray: $dark-text-lighter;
+$brand-primary: $accent;
+$brand-highlight: $accent-highlight;
+$brand-decoration: $decoration;
+
+
+//=== Scaffolding
+$body-bg: #FFF;
+$text-color: $dark-text-darker;
+$link-color: $brand-primary;
+$link-hover-color: $accent-highlight;
+
+
+//=== Typography
+$font-family-sans-serif: "PT Sans", Helvetica, Arial, sans-serif;
+$font-family-monospace: Monaco, Menlo, Consolas, monospace;
+$font-family-base: $font-family-sans-serif;
+
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-medium: 20px;
+$font-size-medium-large: 24px;
+
+$font-size-h1: 55px;
+$font-size-h2: 36px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-h5: 17px;
+$font-size-h6: 14px;
+
+$headings-font-weight: bold;
+
+$padding-large-vertical: 9px;
+$border-radius-base: 2px;
+$border-radius-large: 3px;
+
+
+
+// Navbar
+$navbar-height: 52px;
+$navbar-default-color: $light-text;
+$navbar-default-bg: $accent;
+$navbar-default-border: $accent;
+
+$navbar-default-link-hover-color: $light-text;
+$navbar-default-link-hover-bg: $accent-highlight;
+$navbar-default-link-active-color: $light-text;
+$navbar-default-link-active-bg: $accent-highlight;
+
+$navbar-default-toggle-hover-bg: $accent-highlight;
+$navbar-default-toggle-icon-bar-bg: $light-text;
+$navbar-default-toggle-border-color: $light-text;
+
+$navbar-default-link-color: $light-text;
+$navbar-default-link-active-bg: $accent-highlight;
+
+
+
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  640px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  768px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  992px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+// Outer padding - left and right of the whole page
+$outer-grid-gutter-width: 120px;
+
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-md-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (520px + $grid-gutter-width) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (648px + $grid-gutter-width) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (872px + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+
+
+// === Forms
+
+$input-color: $dark-text;
+$input-border: $helper-text;
+$input-border-radius: 2px;
+$input-border-radius-large: 3px;
+$input-border-focus: $accent-highlight;
+$input-color-placeholder: $helper-text;
+
+$input-height-base: 38px;
+$input-height-large: 43px;
+
+//=== Theme variables
+$subtle-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);

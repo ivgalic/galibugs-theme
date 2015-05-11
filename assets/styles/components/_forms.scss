@@ -1,0 +1,51 @@
+ .form-control {
+   border-width: 2px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.input-gbdefault {
+  @extend .input-lg;
+  font-size: $font-size-base;
+}
+
+// Mailchimp support
+.mce_inline_error {
+  color: #D0021B;
+
+}
+
+#mce-responses {
+  padding-top: 15px;
+}
+
+#mce-error-response {
+  @extend .label;
+  @extend .label-danger;
+  display: block;
+  white-space: normal;
+}
+
+#mce-success-response {
+  @extend .label;
+  @extend .label-success;
+  display: block;
+  white-space: normal;
+}
+
+#mce-FNAME {
+  @include gb_background_url("images/ic_name.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position: calc(100% - 15px);
+  padding-right: 40px;
+}
+
+#mce-EMAIL {
+  @include gb_background_url("images/ic_email.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 15px);
+  padding-right: 55px;
+}

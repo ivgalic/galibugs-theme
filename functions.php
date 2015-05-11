@@ -18,6 +18,8 @@ $sage_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
+  'lib/wp_bootstrap_navwalker.php',// Nav walker for bootstrap
+  'lib/post_previews.php',         // Rendering post previews
 ];
 
 foreach ($sage_includes as $file) {

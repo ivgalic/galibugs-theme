@@ -1,0 +1,19 @@
+.btn-gbdefault {
+  @extend .btn-primary;
+  @extend .btn-lg;
+  font-weight: bold;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  height: 43px;
+  border: none;
+}
+
+.btn-gbdefault:hover {
+  background-color: $brand-highlight;
+}
+
+.btn-gbmidwidth {
+  max-width: 200px;
+}

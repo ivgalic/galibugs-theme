@@ -65,6 +65,28 @@ function asset_path($filename) {
   }
 }
 
+function get_retina_bg_css($filename, $ext, $w = "auto", $h = "auto") {
+  $at1x_path = "../../../../assets/{$filename}.{$ext}";
+  $at2x_path = "../../../../assets/{$filename}@2x.#{$ext}";
+
+  $output = "background-image: url('{$at1x_path}');";
+
+  $output .= "
+  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+         all and (-o-min-device-pixel-ratio: 3/2),
+         all and (min--moz-device-pixel-ratio: 1.5),
+         all and (min-device-pixel-ratio: 1.5) {
+           background-image: url('{$at2x_path}');
+           background-size: $w $h;
+  }";
+
+  return $output;
+}
+
+function get_asset_path($filename) {
+  return get_template_directory_uri() . "/assets/" . $filename;
+}
+
 function assets() {
   wp_enqueue_style('sage_css', asset_path('styles/main.css'), false, null);
 

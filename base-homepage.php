@@ -15,7 +15,7 @@ use Roots\Sage\Wrapper;
     <?php
       do_action('get_header');
       get_template_part('templates/header');
-      get_template_part('templates/blog-header');
+      get_template_part('templates/homepage-header');
     ?>
     <div class="container content" role="document">
         <main class="main" role="main">
