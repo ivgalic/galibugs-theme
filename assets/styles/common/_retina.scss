@@ -5,8 +5,8 @@
 // nathancrank.com
 
 @mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
-  $at1x_path: "../../../../assets/#{$path}.#{$ext}";
-  $at2x_path: "../../../../assets/#{$path}@2x.#{$ext}";
+  $at1x_path: "../#{$path}.#{$ext}";
+  $at2x_path: "../#{$path}@2x.#{$ext}";
 
   background-image: url("#{$at1x_path}");
 
@@ -20,12 +20,12 @@
 }
 
 @function gb_img_url($path) {
-  $asset_path: "../../../../assets/#{$path}";
+  $asset_path: "../#{$path}";
   $url: url("#{$asset_path}");
   @return $url;
 }
 
 @mixin gb_background_url($path) {
-  $asset_path: "../../../../assets/#{$path}";
+  $asset_path: "../#{$path}";
   background-image: url("#{$asset_path}");
 }
