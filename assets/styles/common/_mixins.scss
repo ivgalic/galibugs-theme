@@ -1,0 +1,8 @@
+@mixin gradient-horizontal-three-colors-pattern($pattern, $start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+  background-color: $end-color;
+  background: gb_img_url($pattern) repeat, -webkit-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color) no-repeat;
+  background: gb_img_url($pattern) repeat, -o-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color) no-repeat;
+  background: gb_img_url($pattern) repeat, linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color) no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down, gets no color-stop at all for proper fallback
+}
+

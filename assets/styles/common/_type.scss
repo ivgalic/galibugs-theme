@@ -1,6 +1,45 @@
+h1, h3, h4, .h1, .h3, .h4 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: $brand-decoration;
+    margin-left: 0.12em;
+    margin-top: 0.58em;
+    width: 0.38em;
+    height: 0.38em;
+    border-radius: 0.20em;
+  }
+}
+
+h2, .h2 {
+  color: $dark-text-darker;
+}
+
+h3, .h3 {
+	text-align: left;
+}
+
+h4, .h4 {
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: 400;
+}
+
+h5, .h5 {
+	text-transform: uppercase;
+	font-weight: 400;
+}
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-headings;
   a {
     color: $headings-color;
   }
+}
+
+div, p, a, span {
+	font-weight: 200;
 }

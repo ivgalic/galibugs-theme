@@ -19,6 +19,12 @@
   }
 }
 
+@function gb_img_url($path) {
+  $asset_path: "../../../../assets/#{$path}";
+  $url: url("#{$asset_path}");
+  @return $url;
+}
+
 @mixin gb_background_url($path) {
   $asset_path: "../../../../assets/#{$path}";
   background-image: url("#{$asset_path}");

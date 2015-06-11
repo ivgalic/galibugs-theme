@@ -1,0 +1,6 @@
+.footer {
+  @include gradient-horizontal-three-colors-pattern("images/transp_square_tiles_2.png", $dark-bg, $dark-bg-highlight, 50%, $dark-bg);
+  color: $light-text;
+  padding-bottom: 30px;
+  margin-top: 45px;
+}

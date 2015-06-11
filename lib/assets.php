@@ -65,7 +65,7 @@ function asset_path($filename) {
   }
 }
 
-function get_retina_bg_css($filename, $ext, $w = "auto", $h = "auto") {
+function get_retina_bg_asset_css($filename, $ext, $w = "auto", $h = "auto") {
   $at1x_path = "../../../../assets/{$filename}.{$ext}";
   $at2x_path = "../../../../assets/{$filename}@2x.#{$ext}";
 
@@ -77,6 +77,26 @@ function get_retina_bg_css($filename, $ext, $w = "auto", $h = "auto") {
          all and (min--moz-device-pixel-ratio: 1.5),
          all and (min-device-pixel-ratio: 1.5) {
            background-image: url('{$at2x_path}');
+           background-size: $w $h;
+  }";
+
+  return $output;
+}
+
+function get_retina_bg_image_css($filename, $w = "auto", $h = "auto") {
+  $base = substr($filename, 0, -4);
+  $ext = substr($filename, count($filename) - 4, 4);
+  $at1x_path = $filename;
+  $at2x_path = "{$base}@2x.{$ext}";
+
+  $output = "background-image: url(\"{$at1x_path}\");";
+
+  $output .= "
+  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+         all and (-o-min-device-pixel-ratio: 3/2),
+         all and (min--moz-device-pixel-ratio: 1.5),
+         all and (min-device-pixel-ratio: 1.5) {
+           background-image: url(\"{$at2x_path}\");
            background-size: $w $h;
   }";
 
@@ -98,3 +118,11 @@ function assets() {
   wp_enqueue_script('sage_js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+function theme_fonts() {
+  wp_dequeue_style('open-sans');
+  wp_deregister_style('open-sans');
+  wp_register_style('open-sans', '//fonts.googleapis.com/css?family=Quicksand:300,400|Raleway:700,400,200');
+  wp_enqueue_style('open-sans');
+}
+add_action('wp_print_styles', __NAMESPACE__ . '\\theme_fonts', 100000);

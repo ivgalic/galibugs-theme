@@ -33,23 +33,24 @@ $link-hover-color: $accent-highlight;
 
 
 //=== Typography
-$font-family-sans-serif: "PT Sans", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "Raleway", Helvetica, Arial, sans-serif;
 $font-family-monospace: Monaco, Menlo, Consolas, monospace;
 $font-family-base: $font-family-sans-serif;
+$font-family-headings: "Quicksand", Helvetica, Arial, sans-serif;
 
-$font-size-base: 16px;
-$font-size-small: 14px;
-$font-size-medium: 20px;
+$font-size-base: 18px;
+$font-size-small: 16px;
+$font-size-medium: 22px;
 $font-size-medium-large: 24px;
 
 $font-size-h1: 55px;
 $font-size-h2: 36px;
-$font-size-h3: 24px;
+$font-size-h3: 28px;
 $font-size-h4: 18px;
-$font-size-h5: 17px;
-$font-size-h6: 14px;
+$font-size-h5: 18px;
+$font-size-h6: 16px;
 
-$headings-font-weight: bold;
+$headings-font-weight: 100;
 
 $padding-large-vertical: 9px;
 $border-radius-base: 2px;

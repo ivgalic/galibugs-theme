@@ -18,11 +18,28 @@
   text-align: center;
 }
 
+.gb-pageheader {
+//  @include gradient-horizontal-three-colors($dark-bg, $dark-bg-highlight, 50%, $dark-bg);
+  @include gradient-horizontal-three-colors-pattern("images/transp_square_tiles_2.png", $dark-bg, $dark-bg-highlight, 50%, $dark-bg);
+  color: $light-text;
+  padding-bottom: 30px;
+  padding-top: 60px;
+
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.gb-header-title-only {
+  padding-bottom: 60px;
+}
+
 .gb-category-nav {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
+  margin-top: 60px;
   margin-bottom: 10px;
   display: inline-block;
   text-align: center;

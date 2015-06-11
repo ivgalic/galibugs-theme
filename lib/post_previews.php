@@ -48,15 +48,12 @@ function render_small_preview($post_obj) {
   $output = "";
   $output .= "<div class='gb-small-post-preview'>";
 
-  $image_name = "default_small_post";
-  $image_ext = "jpg";
+  $image_url = "";
   if (has_post_thumbnail($post_obj->ID)) {
-    $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post_obj->ID), 'thumbnail');
-    $image_name = substr($image_url, 0, -4);
-    $image_ext = substr($image_url, count($image_url), 4);
+    $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post_obj->ID), 'thumbnail')[0];
   }
 
-  $output .= "<div class=\"small-image\" style=\"" . Roots\Sage\Assets\get_retina_bg_css($image_name, $image_ext) . "\"></div>"; //get_the_post_thumbnail($post_obj->ID, "thumbnail", array('alt' => $post_obj->post_title));
+  $output .= "<img class='small-image' src='" . $image_url . "'></img>";
 
   $output .= "<h5>{$post_obj->post_title}</h5>";
   $output .= "<p class='post-excerpt'>" . get_the_excerpt() . "</p>";

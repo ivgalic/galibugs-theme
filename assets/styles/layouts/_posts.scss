@@ -14,8 +14,6 @@
   }
 
   .small-image {
-    background: center center no-repeat;
-    height: 160px;
   }
 }
 
@@ -24,11 +22,14 @@
 }
 
 .post-preview-large-image {
-  margin-left: -45px;
-  margin-right: -45px;
+  width: 110%;
+  margin-left: -5%;
+  margin-right: -5%;
   background-color: #000;
-  background: center center no-repeat;
-  height: 300px;
+}
+
+.post-large-image {
+  @extend .post-preview-large-image;
 }
 
 .entry-title {
@@ -52,6 +53,6 @@ time.updated {
   padding-bottom: 30px;
 }
 
-.entry-summary {
+.entry-summary, .entry-content {
   font-size: $font-size-medium;
 }
